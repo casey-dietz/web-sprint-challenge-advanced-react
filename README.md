@@ -63,8 +63,8 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 
   The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-* [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic.
-* [ ] You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
+* [*] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic.
+* [*] You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
 #### Testing the Checkout Form
 * [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
@@ -125,20 +125,24 @@ test("displays plants in cart", () => {
 
 ## Submission format
 
-* [ ] Submit via Codegrade by commiting and pushing any new changes.
-* [ ] Submit a pull-request to merge <firstName-lastName> branch into main. **Please don't merge your own pull request and make sure you are on your own repo**
-* [ ] Check codegrade for automated feedback.
-* [ ] Check codegrade on Monday following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-* [ ] Any changes pushed to your <firstName-lastName> branch will resubmited to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
+* [*] Submit via Codegrade by commiting and pushing any new changes.
+* [*] Submit a pull-request to merge <firstName-lastName> branch into main. **Please don't merge your own pull request and make sure you are on your own repo**
+* [*] Check codegrade for automated feedback.
+* [*] Check codegrade on Monday following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [*] Any changes pushed to your <firstName-lastName> branch will resubmited to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What are the main differences between a stateful and a functional component?
+A stateful component can update state, handle form inputs and respond to events. Rendering something to the DOM is not a stateful behavior. A simple function component that acts as a templating engine, taking a few inputs and formatting them to look nice is not using stateful logic.
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+CWM is depracated and I believe you are asking about componentDidMount - CDM gets called after the first render during the mounting phase. ComponentDidUpdate gets called after the second render in the updating phase.
 
 3. Define stateful logic.
+Stateful logic is built into a component. It can be a function that handles a click event or maybe a function tha sets toggle state, or even a function that formats data before it gets displayed. This kind of logic deals with state in the component.
 
 4. What are the three step of creating a successful test? What is done in each phase?
+Arrange, Act, Assert - Arrange is where we setup what we are testing. Act is the action being taken to test the code, for example if we need to test that text is being rendered to the screen, this is where we write the code to test that. Assert is the final step to ensure what you have picked to be tested is being rendered properly and functioning as intended.
